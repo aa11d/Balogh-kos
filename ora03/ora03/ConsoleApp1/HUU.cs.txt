@@ -1,0 +1,96 @@
+class ᓚᘏᗢ
+{
+    const int n = 30;
+    const int m = 50;
+     static Random rnd = new Random();
+
+    static int[,] palya = new int[n, m];
+
+    static void Kiiratas()
+    {
+        for (int i = 0; i < palya.GetLength(0); i++)
+        {
+            Console.SetCursorPosition(0, i);
+            for (int j = 0; j < palya.GetLength(1); j++)
+            {
+                System.Console.Write(palya[i, j]);
+            }
+            System.Console.WriteLine();
+        }
+    }
+    static void Kaja(int db){
+        for (int i = 0; i < db; i++)
+        {
+            int kajax = rnd.Next(0,m);
+            int kajay = rnd.Next(0,n);
+            int kaja_ert = rnd.Next(5,10);
+            palya[kajax,kajay] = kaja_ert;
+        }
+    }
+    static void Main()
+    {
+
+
+        Console.SetWindowSize(30, 50);
+        Console.ReadKey();
+        int babux = 15;
+        int babuy = 25;
+        bool exit = false;
+        int timer = 100;
+        Console.SetCursorPosition(babux, babuy);
+        System.Console.Write('X');
+
+
+        while (!exit)
+        {
+            timer--;
+            Console.SetCursorPosition(0, 0);
+            System.Console.Write(timer);
+
+            if (Console.KeyAvailable)
+            {
+                ConsoleKeyInfo pressed = System.Console.ReadKey(true);
+                if (pressed.Key == ConsoleKey.Escape)
+                    exit = true;
+
+                else if (pressed.Key == ConsoleKey.UpArrow && babuy > 0)
+                {
+                    Console.SetCursorPosition(babux, babuy);
+                    Console.Write(pressed.KeyChar);
+                    System.Console.Write(' ');
+                    babuy--;
+                    Console.SetCursorPosition(babux, babuy);
+                    System.Console.Write('X');
+                }
+                else if (pressed.Key == ConsoleKey.RightArrow && babux < n)
+                {
+                    Console.SetCursorPosition(babux, babuy);
+                    Console.Write(pressed.KeyChar);
+                    System.Console.Write(' ');
+                    babux++;
+                    Console.SetCursorPosition(babux, babuy);
+                    System.Console.Write('X');
+                }
+                else if (pressed.Key == ConsoleKey.DownArrow && babuy < m - 1)
+                {
+                    Console.SetCursorPosition(babux, babuy);
+                    Console.Write(pressed.KeyChar);
+                    System.Console.Write(' ');
+                    babuy++;
+                    Console.SetCursorPosition(babux, babuy);
+                    System.Console.Write('X');
+                }
+                else if (pressed.Key == ConsoleKey.LeftArrow && babux > 0)
+                {
+                    Console.SetCursorPosition(babux, babuy);
+                    Console.Write(pressed.KeyChar);
+                    System.Console.Write(' ');
+                    babux--;
+                    Console.SetCursorPosition(babux, babuy);
+                    System.Console.Write('X');
+                }
+                
+            }
+        }
+    }
+}
