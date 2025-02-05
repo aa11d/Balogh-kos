@@ -1,1 +1,2 @@
-# Balogh-kos
+# Bobis
+Bóbis repója
