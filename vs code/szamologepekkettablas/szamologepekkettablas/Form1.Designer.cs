@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             balszovegdoboz = new TextBox();
-            jobbszovegdoboz = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -41,21 +40,11 @@
             button9 = new Button();
             baldelgomb = new Button();
             button12 = new Button();
-            jobbdelgomb = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
-            button19 = new Button();
-            button20 = new Button();
-            button21 = new Button();
-            button22 = new Button();
             oszt = new Button();
             szor = new Button();
             kivon = new Button();
             ossze = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // balszovegdoboz
@@ -68,18 +57,6 @@
             balszovegdoboz.TabIndex = 0;
             balszovegdoboz.Text = "0";
             balszovegdoboz.TextAlign = HorizontalAlignment.Right;
-            // 
-            // jobbszovegdoboz
-            // 
-            jobbszovegdoboz.Enabled = false;
-            jobbszovegdoboz.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            jobbszovegdoboz.Location = new Point(1277, 26);
-            jobbszovegdoboz.Name = "jobbszovegdoboz";
-            jobbszovegdoboz.Size = new Size(169, 34);
-            jobbszovegdoboz.TabIndex = 1;
-            jobbszovegdoboz.Text = "0";
-            jobbszovegdoboz.TextAlign = HorizontalAlignment.Right;
-            jobbszovegdoboz.TextChanged += jobbszovegdoboz_TextChanged;
             // 
             // button1
             // 
@@ -202,128 +179,6 @@
             button12.Text = "0";
             button12.UseVisualStyleBackColor = true;
             // 
-            // jobbdelgomb
-            // 
-            jobbdelgomb.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            jobbdelgomb.ForeColor = Color.IndianRed;
-            jobbdelgomb.Location = new Point(1371, 369);
-            jobbdelgomb.Name = "jobbdelgomb";
-            jobbdelgomb.Size = new Size(75, 69);
-            jobbdelgomb.TabIndex = 24;
-            jobbdelgomb.Text = "Del";
-            jobbdelgomb.UseVisualStyleBackColor = true;
-            jobbdelgomb.Click += jobbdelgomb_Click;
-            // 
-            // button13
-            // 
-            button13.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button13.Location = new Point(1144, 369);
-            button13.Name = "button13";
-            button13.Size = new Size(193, 69);
-            button13.TabIndex = 23;
-            button13.Text = "0";
-            button13.UseVisualStyleBackColor = true;
-            button13.Click += jobbszamkatt;
-            // 
-            // button14
-            // 
-            button14.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button14.Location = new Point(1371, 270);
-            button14.Name = "button14";
-            button14.Size = new Size(75, 69);
-            button14.TabIndex = 22;
-            button14.Text = "3";
-            button14.UseVisualStyleBackColor = true;
-            button14.Click += jobbszamkatt;
-            // 
-            // button15
-            // 
-            button15.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button15.Location = new Point(1262, 270);
-            button15.Name = "button15";
-            button15.Size = new Size(75, 69);
-            button15.TabIndex = 21;
-            button15.Text = "2";
-            button15.UseVisualStyleBackColor = true;
-            button15.Click += jobbszamkatt;
-            // 
-            // button16
-            // 
-            button16.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button16.Location = new Point(1144, 270);
-            button16.Name = "button16";
-            button16.Size = new Size(75, 69);
-            button16.TabIndex = 20;
-            button16.Text = "1";
-            button16.UseVisualStyleBackColor = true;
-            button16.Click += jobbszamkatt;
-            // 
-            // button17
-            // 
-            button17.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button17.Location = new Point(1371, 183);
-            button17.Name = "button17";
-            button17.Size = new Size(75, 69);
-            button17.TabIndex = 19;
-            button17.Text = "6";
-            button17.UseVisualStyleBackColor = true;
-            button17.Click += jobbszamkatt;
-            // 
-            // button18
-            // 
-            button18.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button18.Location = new Point(1262, 183);
-            button18.Name = "button18";
-            button18.Size = new Size(75, 69);
-            button18.TabIndex = 18;
-            button18.Text = "5";
-            button18.UseVisualStyleBackColor = true;
-            button18.Click += jobbszamkatt;
-            // 
-            // button19
-            // 
-            button19.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button19.Location = new Point(1144, 183);
-            button19.Name = "button19";
-            button19.Size = new Size(75, 69);
-            button19.TabIndex = 17;
-            button19.Text = "4";
-            button19.UseVisualStyleBackColor = true;
-            button19.Click += jobbszamkatt;
-            // 
-            // button20
-            // 
-            button20.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button20.Location = new Point(1371, 92);
-            button20.Name = "button20";
-            button20.Size = new Size(75, 69);
-            button20.TabIndex = 16;
-            button20.Text = "9";
-            button20.UseVisualStyleBackColor = true;
-            button20.Click += jobbszamkatt;
-            // 
-            // button21
-            // 
-            button21.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button21.Location = new Point(1262, 92);
-            button21.Name = "button21";
-            button21.Size = new Size(75, 69);
-            button21.TabIndex = 15;
-            button21.Text = "8";
-            button21.UseVisualStyleBackColor = true;
-            button21.Click += jobbszamkatt;
-            // 
-            // button22
-            // 
-            button22.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button22.Location = new Point(1144, 92);
-            button22.Name = "button22";
-            button22.Size = new Size(75, 69);
-            button22.TabIndex = 14;
-            button22.Text = "7";
-            button22.UseVisualStyleBackColor = true;
-            button22.Click += jobbszamkatt;
-            // 
             // oszt
             // 
             oszt.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
@@ -368,26 +223,25 @@
             ossze.UseVisualStyleBackColor = true;
             ossze.Click += MuveletKatt;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(1122, 42);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(297, 484);
+            listBox1.TabIndex = 29;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1478, 641);
+            Controls.Add(listBox1);
             Controls.Add(oszt);
             Controls.Add(szor);
             Controls.Add(kivon);
             Controls.Add(ossze);
-            Controls.Add(jobbdelgomb);
-            Controls.Add(button13);
-            Controls.Add(button14);
-            Controls.Add(button15);
-            Controls.Add(button16);
-            Controls.Add(button17);
-            Controls.Add(button18);
-            Controls.Add(button19);
-            Controls.Add(button20);
-            Controls.Add(button21);
-            Controls.Add(button22);
             Controls.Add(baldelgomb);
             Controls.Add(button12);
             Controls.Add(button7);
@@ -399,7 +253,6 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(jobbszovegdoboz);
             Controls.Add(balszovegdoboz);
             Name = "Form1";
             Text = "számológép";
@@ -410,7 +263,6 @@
         #endregion
 
         private TextBox balszovegdoboz;
-        private TextBox jobbszovegdoboz;
         private Button button1;
         private Button button2;
         private Button button3;
@@ -422,20 +274,10 @@
         private Button button9;
         private Button baldelgomb;
         private Button button12;
-        private Button jobbdelgomb;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Button button17;
-        private Button button18;
-        private Button button19;
-        private Button button20;
-        private Button button21;
-        private Button button22;
         private Button oszt;
         private Button szor;
         private Button kivon;
         private Button ossze;
+        private ListBox listBox1;
     }
 }

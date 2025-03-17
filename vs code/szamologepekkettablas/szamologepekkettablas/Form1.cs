@@ -7,10 +7,6 @@ namespace szamologepekkettablas
             InitializeComponent();
         }
 
-        private void jobbszovegdoboz_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void balszamokkatt(object sender, EventArgs e)
         {
@@ -36,34 +32,14 @@ namespace szamologepekkettablas
             }
         }
 
-        private void jobbszamkatt(object sender, EventArgs e)
-        {
-            char szam = (sender as Button).Text[0];
-            if (jobbszovegdoboz.Text == "0")
-            {
-                jobbszovegdoboz.Text = szam.ToString();
+        
 
-            }
-            else
-            {
-                jobbszovegdoboz.Text += szam.ToString();
-            }
 
-        }
-
-        private void jobbdelgomb_Click(object sender, EventArgs e)
-        {
-            jobbszovegdoboz.Text = jobbszovegdoboz.Text.Substring(0, jobbszovegdoboz.Text.Length - 1);
-            if (jobbszovegdoboz.Text == "")
-            {
-                jobbszovegdoboz.Text = "0";
-            }
-        }
 
         private void MuveletKatt(object sender, EventArgs e)
         {
             int bal = int.Parse(balszovegdoboz.Text);
-            int jobb = int.Parse(jobbszovegdoboz.Text);
+          
             int ered = 0;
             bool hiba = false;
 
@@ -71,29 +47,21 @@ namespace szamologepekkettablas
             switch(muv)
             {
                 case '+':
-                    ered = bal+jobb;
+                    ered = bal;
                     break;
                 case '-':
-                    ered = bal - jobb;
+                    ered = bal ;
                     break;
                 case '*':
-                    ered = bal * jobb;
+                    ered = bal ;
                     break;
-                case '/':
-                    if (jobb != 0)
-                    {
-                        ered = bal / jobb;
-                    }
-                    else 
-                    {
-                        hiba = true;
-                    }
-                    break;
+                
+                   
             }
             if (!hiba)
             {
                 balszovegdoboz.Text = ered.ToString();
-                jobbszovegdoboz.Text = "0";
+                
             }
             else 
             {
